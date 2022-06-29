@@ -1,0 +1,32 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        jcenter() // Warning: this repository is going to shut down soon
+        maven { url 'https://jitpack.io'}
+        maven {
+            url 'https://jitpack.io'
+
+            name = "GitHubPackages"
+
+            url = uri("https://maven.pkg.github.com/Cuberto/liquid-swipe-android")
+            credentials {
+
+                username = "88083752"
+                password = "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"
+            }
+        }
+
+    }
+}
+rootProject.name = "ProjectMoveek"
+include ':app'
