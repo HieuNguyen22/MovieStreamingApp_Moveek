@@ -42,9 +42,11 @@ public class YourMovFragment extends Fragment {
     private FirebaseAuth mAuth;
 
     // IP tro
-//    private String ip = "192.168.0.111";
+//    private String ip = "192.168.0.102";
     // IP nha
-    private String ip = "192.168.0.109";
+//    private String ip = "192.168.0.109";
+    // IP dt
+    private String ip = "192.168.43.134";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

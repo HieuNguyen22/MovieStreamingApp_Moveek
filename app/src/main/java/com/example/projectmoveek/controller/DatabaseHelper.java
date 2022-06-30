@@ -82,9 +82,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String L_ISLIKED = "lIsLiked";
 
     // IP tro
-//    public static final String ip = "192.168.0.111";
+//    public static final String ip = "192.168.0.102";
     // IP nha
-    public static final String ip = "192.168.0.109";
+//    public static final String ip = "192.168.0.109";
+    // IP dt
+    private String ip = "192.168.43.134";
 
     public DatabaseHelper(@Nullable Context context) {
         super(context, "moveek_app.db", null, 1);

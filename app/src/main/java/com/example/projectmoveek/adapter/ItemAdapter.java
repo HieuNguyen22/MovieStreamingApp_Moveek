@@ -50,9 +50,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     private String fidUser;
 
     // IP tro
-//   private String ip = "192.168.0.111";
+//   private String ip = "192.168.0.102";
     // IP nha
-    private String ip = "192.168.0.109";
+//    private String ip = "192.168.0.109";
+    // IP dt
+    private String ip = "192.168.43.134";
 
     private String urlLike = "http://" + ip + "/android_moveek/get_data_like.php";
     private String urlDeleteLike = "http://" + ip + "/android_moveek/delete_data_like.php";

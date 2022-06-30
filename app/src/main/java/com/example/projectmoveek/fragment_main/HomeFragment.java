@@ -72,9 +72,11 @@ public class HomeFragment extends Fragment {
     private CardView cardViewSearch;
 
     // IP tro
-//    private String ip = "192.168.0.111";
+//    private String ip = "192.168.0.102";
     // IP nha
-    private String ip = "192.168.0.109";
+//    private String ip = "192.168.0.109";
+    // IP dt
+    private String ip = "192.168.43.134";
 
     // URL
     private String url = "http://" + ip + "/android_moveek/get_data_user.php";

@@ -67,9 +67,11 @@ public class MovieStreamActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     // IP tro
-//    private String ip = "192.168.0.111";
+//    private String ip = "192.168.0.102";
     // IP nha
-    private String ip = "192.168.0.109";
+//    private String ip = "192.168.0.109";
+    // IP dt
+    private String ip = "192.168.43.134";
 
     private String url = "http://" + ip + "/android_moveek/get_data_movie.php";
 

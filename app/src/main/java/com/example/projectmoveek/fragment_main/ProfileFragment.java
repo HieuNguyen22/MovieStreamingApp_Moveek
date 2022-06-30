@@ -79,9 +79,11 @@ public class ProfileFragment extends Fragment {
     private String fid;
 
     // IP tro
-//    private String ip = "192.168.0.111";
+//    private String ip = "192.168.0.102";
     // IP nha
-    private String ip = "192.168.0.109";
+//    private String ip = "192.168.0.109";
+    // IP dt
+    private String ip = "192.168.43.134";
 
     private String url_get_user = "http://" + ip + "/android_moveek/get_data_user.php";
     private String url_get_favor = "http://" + ip + "/android_moveek/get_data_movie_favor.php";
