@@ -63,17 +63,16 @@ public class MovieInfoActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     // IP tro
-//    private String ip = "192.168.0.102";
+//    private String ip = "192.168.0.111";
     // IP nha
-//    private String ip = "192.168.0.109";
-    // IP dt
-    private String ip = "192.168.43.134";
+    private String ip = "192.168.0.109";
 
     // URL
-    private String urlGetMovie = "http://" + ip + "/android_moveek/get_data_movie.php";
-    private String urlGetCast = "http://" + ip + "/android_moveek/get_data_cast_join_movie.php";
-    private String urlDeleteLike = "http://" + ip + "/android_moveek/delete_data_like.php";
-    private String urlInsertLike = "http://" + ip + "/android_moveek/insert_data_like.php";
+    private String urlWeb = "https://moveekhye.000webhostapp.com/";
+    private String urlGetMovie = urlWeb+"get_data_movie.php";
+    private String urlGetCast = urlWeb+"get_data_cast_join_movie.php";
+    private String urlDeleteLike = urlWeb+"delete_data_like.php";
+    private String urlInsertLike = urlWeb+"insert_data_like.php";
 
 
     @Override

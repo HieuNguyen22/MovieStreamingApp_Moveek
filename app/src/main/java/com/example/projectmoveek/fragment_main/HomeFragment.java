@@ -72,14 +72,14 @@ public class HomeFragment extends Fragment {
     private CardView cardViewSearch;
 
     // IP tro
-//    private String ip = "192.168.0.102";
+//    private String ip = "192.168.0.111";
     // IP nha
 //    private String ip = "192.168.0.109";
-    // IP dt
-    private String ip = "192.168.43.134";
 
     // URL
-    private String url = "http://" + ip + "/android_moveek/get_data_user.php";
+    private String urlWeb = "https://moveekhye.000webhostapp.com/";
+
+    private String urlGetUser = urlWeb + "get_data_user.php";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -178,7 +178,7 @@ public class HomeFragment extends Fragment {
     private void setUpViewProfile() {
         if (mAuth.getCurrentUser() != null) {
             RequestQueue requestQueue = Volley.newRequestQueue(getContext());
-            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
+            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, urlGetUser, null,
                     new Response.Listener<JSONArray>() {
                         @Override
                         public void onResponse(JSONArray response) {

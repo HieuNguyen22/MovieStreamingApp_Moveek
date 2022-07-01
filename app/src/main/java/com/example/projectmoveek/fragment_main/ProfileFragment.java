@@ -79,17 +79,16 @@ public class ProfileFragment extends Fragment {
     private String fid;
 
     // IP tro
-//    private String ip = "192.168.0.102";
+//    private String ip = "192.168.0.111";
     // IP nha
 //    private String ip = "192.168.0.109";
-    // IP dt
-    private String ip = "192.168.43.134";
 
-    private String url_get_user = "http://" + ip + "/android_moveek/get_data_user.php";
-    private String url_get_favor = "http://" + ip + "/android_moveek/get_data_movie_favor.php";
-    private String url_update_avatar = "http://" + ip + "/android_moveek/update_user_avatar.php";
-    private String url_update_info = "http://" + ip + "/android_moveek/update_user_info.php";
-    private String url_update_password = "http://" + ip + "/android_moveek/update_user_password.php";
+    private String urlWeb = "https://moveekhye.000webhostapp.com/";
+    private String url_get_user = urlWeb+"get_data_user.php";
+    private String url_get_favor = urlWeb+"get_data_movie_favor.php";
+    private String url_update_avatar = urlWeb+"update_user_avatar.php";
+    private String url_update_info = urlWeb+"update_user_info.php";
+    private String url_update_password = urlWeb+"update_user_password.php";
     private String path = "Avatars/" + fid + "/avatar_new.jpg";
 
 

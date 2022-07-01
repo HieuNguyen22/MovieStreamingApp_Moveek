@@ -82,11 +82,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String L_ISLIKED = "lIsLiked";
 
     // IP tro
-//    public static final String ip = "192.168.0.102";
+//    public static final String ip = "192.168.0.111";
     // IP nha
 //    public static final String ip = "192.168.0.109";
-    // IP dt
-    private String ip = "192.168.43.134";
+
+    private String urlWeb = "https://moveekhye.000webhostapp.com/";
+    private String urlInsertUser = urlWeb + "insert_user.php";
+    private String urlGetMovies = urlWeb + "get_data_movie.php";
+    private String urlGetFavor = urlWeb + "get_data_movie_favor.php";
+    private String urlGetUser = urlWeb + "get_data_user.php";
+
+
+
+
+
 
     public DatabaseHelper(@Nullable Context context) {
         super(context, "moveek_app.db", null, 1);
@@ -213,9 +222,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void addUserData(UserModel userModel) {
-        String url = "http://" + ip + "/android_moveek/insert_user.php";
         RequestQueue requestQueue = Volley.newRequestQueue(mcontext);
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, urlInsertUser,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -305,10 +313,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public List<ItemModel> getAllMoviesItem(ItemAdapter adapter) {
-        String url = "http://" + ip + "/android_moveek/get_data_movie.php";
         List<ItemModel> mList = new ArrayList<>();
         RequestQueue requestQueue = Volley.newRequestQueue(mcontext);
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, urlGetMovies, null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
@@ -345,10 +352,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public List<ItemModel> getAllMoviesItemSlider(SliderAdapter adapter) {
-        String url = "http://" + ip + "/android_moveek/get_data_movie.php";
         List<ItemModel> mList = new ArrayList<>();
         RequestQueue requestQueue = Volley.newRequestQueue(mcontext);
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, urlGetMovies, null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
@@ -385,12 +391,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public List<ItemModel> getAllMoviesItemLong(ItemAdapterLong adapter) {
-        String url = "http://" + ip + "/android_moveek/get_data_movie.php";
-
         List<ItemModel> mList = new ArrayList<>();
         RequestQueue requestQueue = Volley.newRequestQueue(mcontext);
 
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, urlGetMovies, null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
@@ -425,11 +429,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public List<ItemModel> getMoviesFavor(ItemAdapterLong adapter, String fidUser) {
-        String url = "http://" + ip + "/android_moveek/get_data_movie_favor.php";
         List<ItemModel> mList = new ArrayList<>();
         RequestQueue requestQueue = Volley.newRequestQueue(mcontext);
         // Check favor
-        StringRequest requestLike = new StringRequest(Request.Method.POST, url,
+        StringRequest requestLike = new StringRequest(Request.Method.POST, urlGetFavor,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String responseLike) {
@@ -509,11 +512,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public UserModel getUserData(String fID) {
         final UserModel[] model = new UserModel[1];
-        // IP tro
-        String url = "http://" + ip + "/android_moveek/get_data_user.php";
 
         RequestQueue requestQueue = Volley.newRequestQueue(mcontext);
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, urlGetUser, null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {

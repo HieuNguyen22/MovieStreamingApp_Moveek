@@ -44,13 +44,12 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderView
     private String fidUser;
 
     // IP tro
-//   private String ip = "192.168.0.102";
+//   private String ip = "192.168.0.111";
     // IP nha
 //    private String ip = "192.168.0.109";
-    // IP dt
-    private String ip = "192.168.43.134";
-
-    private String urlLike = "http://" + ip + "/android_moveek/get_data_like.php";
+//
+//    private String urlLike = "http://" + ip + "/android_moveek/get_data_like.php";
+    private String urlLike = "https://moveekhye.000webhostapp.com//get_data_like.php";
 
     public SliderAdapter(Context mContext, ViewPager2 viewPager) {
         this.mContext = mContext;

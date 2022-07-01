@@ -67,13 +67,12 @@ public class MovieStreamActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     // IP tro
-//    private String ip = "192.168.0.102";
+//    private String ip = "192.168.0.111";
     // IP nha
 //    private String ip = "192.168.0.109";
-    // IP dt
-    private String ip = "192.168.43.134";
 
-    private String url = "http://" + ip + "/android_moveek/get_data_movie.php";
+    private String urlWeb = "https://moveekhye.000webhostapp.com/";
+    private String urlGetMovies = urlWeb + "get_data_movie.php";
 
 
     @Override
@@ -103,7 +102,7 @@ public class MovieStreamActivity extends AppCompatActivity {
 
     private void getMovie() {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, urlGetMovies, null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {

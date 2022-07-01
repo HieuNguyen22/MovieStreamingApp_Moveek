@@ -50,16 +50,15 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     private String fidUser;
 
     // IP tro
-//   private String ip = "192.168.0.102";
+//   private String ip = "192.168.0.111";
     // IP nha
 //    private String ip = "192.168.0.109";
-    // IP dt
-    private String ip = "192.168.43.134";
 
-    private String urlLike = "http://" + ip + "/android_moveek/get_data_like.php";
-    private String urlDeleteLike = "http://" + ip + "/android_moveek/delete_data_like.php";
-    private String urlInsertLike = "http://" + ip + "/android_moveek/insert_data_like.php";
-    private String urlUser = "http://" + ip + "/android_moveek/get_data_user.php";
+    private String url = "https://moveekhye.000webhostapp.com/";
+    private String urlLike = url + "get_data_like.php";
+    private String urlDeleteLike = url + "delete_data_like.php";
+    private String urlInsertLike = url + "insert_data_like.php";
+    private String urlGetUser = url + "get_data_user.php";
 
     public ItemAdapter(Context mContext, IClickOnItemListener listener) {
         this.mContext = mContext;
