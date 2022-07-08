@@ -67,11 +67,13 @@ public class MovieStreamActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     // IP tro
-//    private String ip = "192.168.0.111";
+    private String ip = "192.168.0.102";
     // IP nha
 //    private String ip = "192.168.0.109";
 
-    private String urlWeb = "https://moveekhye.000webhostapp.com/";
+    //    private String urlWeb = "https://moveekhye.000webhostapp.com/";
+    private String urlWeb = "http://" + ip + "/android_moveek/";
+
     private String urlGetMovies = urlWeb + "get_data_movie.php";
 
 
@@ -147,11 +149,11 @@ public class MovieStreamActivity extends AppCompatActivity {
                                 @Override
                                 public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
                                     // Check condition
-                                    if(playbackState == Player.STATE_BUFFERING){
+                                    if (playbackState == Player.STATE_BUFFERING) {
                                         // When buffering
                                         // Show progress bar
                                         progressBar.setVisibility(View.VISIBLE);
-                                    } else if (playbackState == Player.STATE_READY){
+                                    } else if (playbackState == Player.STATE_READY) {
                                         // When ready
                                         // Hide progress bar
                                         progressBar.setVisibility(View.GONE);
@@ -199,7 +201,7 @@ public class MovieStreamActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(View view) {
                                     // Check condition
-                                    if(flag) {
+                                    if (flag) {
                                         // Set image fullscreen
                                         imgFullscreen.setImageResource(R.drawable.ic_baseline_fullscreen);
 
@@ -208,7 +210,7 @@ public class MovieStreamActivity extends AppCompatActivity {
 
                                         // Set flag value is false;
                                         flag = false;
-                                    } else{
+                                    } else {
                                         // Set image exit fullscreen
                                         imgFullscreen.setImageResource(R.drawable.ic_round_fullscreen_exit);
 

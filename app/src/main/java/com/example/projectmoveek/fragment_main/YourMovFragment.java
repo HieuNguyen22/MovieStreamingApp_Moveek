@@ -42,13 +42,14 @@ public class YourMovFragment extends Fragment {
     private FirebaseAuth mAuth;
 
     // IP tro
-//    private String ip = "192.168.0.111";
+    private String ip = "192.168.0.102";
     // IP nha
 //    private String ip = "192.168.0.109";
 
-    private String urlWeb = "https://moveekhye.000webhostapp.com/";
-    private String urlGetMovies = urlWeb + "get_data_movie.php";
+    //    private String urlWeb = "https://moveekhye.000webhostapp.com/";
+    private String urlWeb = "http://" + ip + "/android_moveek/";
 
+    private String urlGetMovies = urlWeb + "get_data_movie.php";
 
 
     @Override
@@ -76,7 +77,7 @@ public class YourMovFragment extends Fragment {
     }
 
     private void setRecyclerView() {
-        if (mAuth.getCurrentUser() != null){
+        if (mAuth.getCurrentUser() != null) {
             RequestQueue requestQueue = Volley.newRequestQueue(getContext());
             JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, urlGetMovies, null,
                     new Response.Listener<JSONArray>() {
@@ -95,7 +96,7 @@ public class YourMovFragment extends Fragment {
                                         String nameFile = fileMovie.getName();
                                         String[] nameParts = nameFile.split("_");
                                         String fileID = nameParts[0];
-                                        if(object.getInt("ID") == Integer.parseInt(fileID.trim())){
+                                        if (object.getInt("ID") == Integer.parseInt(fileID.trim())) {
                                             mList.add(new ItemModel(object.getInt("ID"), object.getString("Title"), object.getString("Poster")
                                                     , object.getString("Year")
                                                     , object.getString("Length")
@@ -121,8 +122,7 @@ public class YourMovFragment extends Fragment {
                         }
                     });
             requestQueue.add(jsonArrayRequest);
-        }
-        else
+        } else
             mList = databaseHelper.getAllMoviesItemLong(itemAdapter);
 
         itemAdapter.setData(mList);

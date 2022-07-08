@@ -72,12 +72,14 @@ public class HomeFragment extends Fragment {
     private CardView cardViewSearch;
 
     // IP tro
-//    private String ip = "192.168.0.111";
+    private String ip = "192.168.0.102";
     // IP nha
 //    private String ip = "192.168.0.109";
 
     // URL
-    private String urlWeb = "https://moveekhye.000webhostapp.com/";
+//    private String urlWeb = "https://moveekhye.000webhostapp.com/";
+    private String urlWeb =  "http://" + ip + "/android_moveek/";
+
 
     private String urlGetUser = urlWeb + "get_data_user.php";
 

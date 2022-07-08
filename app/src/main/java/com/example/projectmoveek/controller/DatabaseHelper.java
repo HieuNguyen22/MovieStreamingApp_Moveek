@@ -82,11 +82,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String L_ISLIKED = "lIsLiked";
 
     // IP tro
-//    public static final String ip = "192.168.0.111";
+    public static final String ip = "192.168.0.102";
     // IP nha
 //    public static final String ip = "192.168.0.109";
 
-    private String urlWeb = "https://moveekhye.000webhostapp.com/";
+    private String urlWeb =  "http://" + ip + "/android_moveek/";
+//    private String urlWeb = "https://moveekhye.000webhostapp.com/";
+
     private String urlInsertUser = urlWeb + "insert_user.php";
     private String urlGetMovies = urlWeb + "get_data_movie.php";
     private String urlGetFavor = urlWeb + "get_data_movie_favor.php";

@@ -31,9 +31,9 @@ public class SearchActivity extends AppCompatActivity {
     private ImageView imgBack;
 
     // IP tro
-//    private String ip = "192.168.0.111";
+    private String ip = "192.168.0.102";
     // IP nha
-    private String ip = "192.168.0.109";
+//    private String ip = "192.168.0.109";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
